@@ -1,0 +1,12 @@
+<div class="container">
+  <%= simple_form_for [@flat, @booking] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :number_of_guests %>
+
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-primary" %>
+      <%= link_to "Cancel booking", flat_path(@flat), class: "btn btn-danger" %>
+    </div>
+  <% end %>
+</div>
